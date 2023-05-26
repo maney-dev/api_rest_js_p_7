@@ -75,6 +75,21 @@ app.get('/api/articles/blog', (req,res) => {
 })
 
 // afficher un article a travers son id
+app.get('/api/articles/:contenu', (req, res)=>{
+  const {contenu: articleDetail} = req.params
+  const sql = "SELECT * FROM article WHERE contenu = ?";
+  const params = [articleDetail]
+  db.get(sql, params,(err, row) => {
+    if(err){
+      console.log("ca va contenu")
+     res.status(400).json({msg: 'err' });
+     return
+    }
+    res.json({message: `Afficher l'article de l'${articleDetail}`, data: row })
+  })
+})
+
+// detail article
 app.get('/api/articles/:id', (req, res)=>{
   const {id: articleID} = req.params
   const sql = "SELECT * FROM article WHERE id = ?";
