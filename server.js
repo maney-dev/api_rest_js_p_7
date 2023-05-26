@@ -16,7 +16,7 @@ app.get('/', function(req, res,) {
 
 
 //lister les articles
-app.get('/api/articles', (req, res) => {
+app.get('/api/articles', (req, res) => { 
   const sql = "SELECT * FROM article";
   //const params = []
   db.all(sql, (err, rows) => {
@@ -31,16 +31,16 @@ app.get('/api/articles', (req, res) => {
 
 //Blog verbose
 const blog = [
-  {id: 1, nom: 'article 1'},
-  {id: 2, nom: 'article 2'},
-  {id: 3, nom: 'article 3'},
-  {id: 4, nom: 'article 4'},
-  {id: 5, nom: 'article 5'},
-  {id: 6, nom: 'article 6'},
-  {id: 7, nom: 'article 7'},
-  {id: 8, nom: 'article 8'},
-  {id: 9, nom: 'article 9'},
-  {id: 10,nom: 'article 10'},
+  {id: 1, Titre: ' Économie maritime et insularité', Contenu:"Les Cahiers d'Outre-mer",detail:"le cas des îles tropicales", auteur: 'Jean-Claude Maillard', date_de_création:'mars 1978', date_de_dernière_mise_à_jour:'avril 2022'},
+  {id: 2, Titre: 'REST, un style d\'architecture universel', contenu:'Introduction au style d\'architecture REST...', detail:'Historique de REST, HTTP,GET, et POST...', auteur: 'Jean-Paul Figer', date_de_création: 'le 15/08//2005', date_de_dernière_mise_à_jour: 'l2 22/09/2006'},
+  {id: 3, Titre: 'Peer-to-Peer (P2P),Pair a Pair et cie', contenu:'L\'histoire et les caractéristiques des systèmes Peer to Peer', detail:'ICQ: les pionniers, La saga Napster...', auteur: 'Mark', date_de_création: 'le 12/09/2001', date_de_dernière_mise_à_jour: 'le 12/09/2001'},
+  {id: 4, Titre: 'Les autoroutes de l\'informatique', contenu:'vers la societé de l\'information', detail:'une révolution, L\'age de l\'information, les enjeux, un défi pour les entreprises', auteur: 'Kravanbert', date_de_création: 'le 24/04/1996', date_de_dernière_mise_à_jour: 'le 24/04/1996'},
+  {id: 5, Titre: 'Une robe pour la Princesse', contenu:'Une parabole pour les informaticiens', detail:'ironie sur la maniere de travailler des informaticiens, leur mode de vi...', auteur: 'Jean.P Figer', date_de_création: 'le 16/02/1989', date_de_dernière_mise_à_jour: 'le 16/02/1990'},
+  {id: 6, Titre: 'Comment cabler sa maison ou son appartement', contenu:'AUTOBIOGRAPHIE...', detail:'conseils pratiques pour installer son appartement ou sa maison. Avec ou sans fils ? CPL ou Wifi ?', auteur: 'Jean-Paul Figer', date_de_création: 'le 01/06/2004', date_de_dernière_mise_à_jour: ' le 26/03/2018'},
+  {id: 7, Titre: 'L\'internet des objets a la maison ', contenu:'conseils pratiques pour surveiller et controler...', detail:'L\'Afrique libre...', auteur: 'Inconnu', date_de_création: 'mars 2020', date_de_dernière_mise_à_jour: 'le 07/10/2019'},
+  {id: 8, Titre: 'Starlink,Internet haut-debit par satellite', contenu:'les satellites a haut-debit', detail:'Installation du test de Starlink sur...', auteur:'Starlink',date_de_création: 'aout 2021', date_de_dernière_mise_à_jour: 'le 16/05/2022'},
+  {id: 9, Titre: 'Une station météo personnelle', contenu:'Conseils pratiques pour installer...', detail:'les informations dans un système domotique', auteur:'Waldbeck Halley',date_de_création: 'mars 1965', date_de_dernière_mise_à_jour: 'le 01/06/2022'},
+  {id: 10, Titre:'Serverless sur Cloud', contenu:'Description d\'une nouvelle offre Cloud...', detail:' le serverless computing avec comme exemple le site www.figer.com', auteur: 'Apple', date_de_création: 'Avril 2018', date_de_dernière_mise_à_jour: 'le 19/03/2020'},
   
 ]
 
