@@ -32,7 +32,7 @@ app.get('/api/articles', (req, res) => {
 //Blog verbose
 const blog = [
   {id: 1, Titre: ' Économie maritime et insularité', Contenu:"Les Cahiers d'Outre-mer",detail:"le cas des îles tropicales", auteur: 'Jean-Claude Maillard', date_de_création:'mars 1978', date_de_dernière_mise_à_jour:'avril 2022'},
-  {id: 2, Titre: 'REST, un style d\'architecture universel', contenu:'Introduction au style d\'architecture REST...', detail:'Historique de REST, HTTP,GET, et POST...', auteur: 'Jean-Paul Figer', date_de_création: 'le 15/08//2005', date_de_dernière_mise_à_jour: 'l2 22/09/2006'},
+  {id: 2, Titre: 'REST, un style d\'architecture universel', contenu:'Introduction au style d\'architecture REST...', detail:'Historique de REST, HTTP,GET, et POST...', auteur: 'Jean-Paul Figer', date_de_création: 'le 15/08/2005', date_de_dernière_mise_à_jour: 'le 22/09/2006'},
   {id: 3, Titre: 'Peer-to-Peer (P2P),Pair a Pair et cie', contenu:'L\'histoire et les caractéristiques des systèmes Peer to Peer', detail:'ICQ: les pionniers, La saga Napster...', auteur: 'Mark', date_de_création: 'le 12/09/2001', date_de_dernière_mise_à_jour: 'le 12/09/2001'},
   {id: 4, Titre: 'Les autoroutes de l\'informatique', contenu:'vers la societé de l\'information', detail:'une révolution, L\'age de l\'information, les enjeux, un défi pour les entreprises', auteur: 'Kravanbert', date_de_création: 'le 24/04/1996', date_de_dernière_mise_à_jour: 'le 24/04/1996'},
   {id: 5, Titre: 'Une robe pour la Princesse', contenu:'Une parabole pour les informaticiens', detail:'ironie sur la maniere de travailler des informaticiens, leur mode de vi...', auteur: 'Jean.P Figer', date_de_création: 'le 16/02/1989', date_de_dernière_mise_à_jour: 'le 16/02/1990'},
@@ -85,7 +85,7 @@ app.get('/api/articles/:contenu', (req, res)=>{
      res.status(400).json({msg: 'err' });
      return
     }
-    res.json({message: `Afficher l'article de l'${articleDetail}`, data: row })
+    res.json({message: `Le contenu de l'article ast: '${articleDetail}`, data: row })
   })
 })
 
