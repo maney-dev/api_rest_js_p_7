@@ -167,7 +167,7 @@ app.delete("/api/articles/:id", (req, res) =>{
       resultat.status(400).json({msg: 'err'})
       return
     }
-    res.json({message: `Article ${articleID}  supprimé avec succès`, data: this.changes})
+    res.json({message: `L'article avec l'id: ${articleID}  supprimé avec succès`, data: this.changes})
   })
 })
 // demarrer le serveur
