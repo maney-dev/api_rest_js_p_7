@@ -74,7 +74,7 @@ app.get('/api/articles/blog', (req,res) => {
   res.json(results)
 })
 
-// afficher un article a travers son id
+// afficher le contenu d'un article
 app.get('/api/articles/:contenu', (req, res)=>{
   const {contenu: articleDetail} = req.params
   const sql = "SELECT * FROM article WHERE contenu = ?";
